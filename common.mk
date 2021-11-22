@@ -321,7 +321,8 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Tag \
     vendor.nxp.nxpese@1.0:64 \
-    vendor.nxp.nxpnfc@1.0:64
+    vendor.nxp.nxpnfc@1.0:64 \
+    libjni_shim
 
 # OMX
 PRODUCT_PACKAGES += \
