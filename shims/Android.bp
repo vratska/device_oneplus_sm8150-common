@@ -18,3 +18,10 @@ cc_library {
     srcs: ["libril_shim.cpp"],
     vendor: true
 }
+
+cc_library {
+    name: "libjni_shim",
+    srcs: ["jni_nativehelper.c"],
+    shared_libs: ["libnativehelper"],
+    system_ext_specific: true,
+}

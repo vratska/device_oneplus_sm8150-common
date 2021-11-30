@@ -63,7 +63,10 @@ function blob_fixup() {
         vendor/bin/hw/qcrild)
             "${PATCHELF}" --add-needed libril_shim.so "${2}"
             ;;
-        system/etc/nfcee_access.xml)
+	system_ext/lib64/libnxpnfc_nci_jni.so)
+	    "${PATCHELF}" --add-needed libjni_shim.so "${2}"
+            ;;
+	system/etc/nfcee_access.xml)
             sed -i -e 's|xliff=\"urn:oasis:names:tc:xliff:document:1.2|android=\"http:\/\/schemas.android.com\/apk\/res\/android|' "${2}"
             ;;
     esac
